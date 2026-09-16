@@ -12,6 +12,7 @@ import AppButton from '../src/components/AppButton'
 export default function Register() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
     const [loading] = useState(false)
 
     return (
@@ -40,6 +41,14 @@ export default function Register() {
                     placeholder="********"
                     value={password}
                     onChangeText={setPassword}
+                />
+
+                <AppInput
+                    label="Confirmar senha"
+                    secureTextEntry
+                    placeholder="********"
+                    value={confirmPassword}
+                    onChangeText={setConfirmPassword}
                 />
 
                 <AppButton
